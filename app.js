@@ -6,10 +6,13 @@ const userRouter = require('./routes/user.routes');
 const dotenv = require('dotenv');
 const connectToDb = require('./config/db');
 const bcrypt = require('bcrypt');
+const cookieParser = require('cookie-parser');
+const indexRouter = require('./routes/index.routes');
 
 // middlewares
 app.use(morgan('dev')) //external middleware to show what's going on in the console
 app.use(express.json()) // internal middleware to make my server able to understand json data
+app.use(cookieParser()) // internal middleware to make my server able to understand cookies
 app.use(express.urlencoded({ extended: true })) // used form submission
 app.use(express.static("public")) // used for static files
 
@@ -30,6 +33,8 @@ app.get('/about', (req, res) => {
   res.render('about');
 });
 
+// imported routes
+app.use('/', indexRouter);
 app.use('/user', userRouter);
 
 app.listen(3000, () => {

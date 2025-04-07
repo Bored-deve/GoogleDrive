@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind + Flowbite Boilerplate</title>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Flowbite plugin for Tailwind -->
+    <script src="https://unpkg.com/flowbite@2.3.0/dist/flowbite.min.js"></script>
+
+    <!-- Optionally configure Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1D4ED8',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Navbar Example -->
+    <nav class="bg-white border-b border-gray-200 px-4 py-2.5">
+        <div class="container mx-auto flex flex-wrap items-center justify-between">
+            <a href="#" class="text-xl font-semibold text-primary">MySite</a>
+            <button data-collapse-toggle="navbar" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg md:hidden"
+                aria-controls="navbar" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 5h14M3 10h14M3 15h14" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+
+            <div class="hidden w-full md:block md:w-auto" id="navbar">
+                <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0">
+                    <li><a href="#" class="block py-2 px-3 text-gray-700 hover:text-primary">Home</a></li>
+                    <li><a href="#" class="block py-2 px-3 text-gray-700 hover:text-primary">About</a></li>
+                    <li><a href="#" class="block py-2 px-3 text-gray-700 hover:text-primary">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 text-center">
+        <h1 class="text-4xl font-bold text-gray-800">Welcome to Tailwind + Flowbite</h1>
+        <p class="mt-4 text-gray-600">Quick starter template using CDN setup</p>
+        <button type="button"
+            class="mt-6 inline-flex items-center px-5 py-2.5 text-white bg-primary hover:bg-blue-700 rounded-lg text-sm font-medium">
+            Get Started
+        </button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 text-center py-6">
+        <p class="text-sm text-gray-500">© 2025 MySite. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
