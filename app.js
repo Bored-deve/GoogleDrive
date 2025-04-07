@@ -3,7 +3,6 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan')
 const userRouter = require('./routes/user.routes');
-const sellerRouter = require('./routes/seller.routes');
 const dotenv = require('dotenv');
 const connectToDb = require('./config/db');
 const bcrypt = require('bcrypt');
@@ -32,7 +31,6 @@ app.get('/about', (req, res) => {
 });
 
 app.use('/user', userRouter);
-app.use('/seller', sellerRouter);
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');

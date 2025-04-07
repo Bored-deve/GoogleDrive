@@ -6,7 +6,7 @@ const userModel = require('../models/user.model');
 // user register
 
 router.get('/register',
-  (req, res) => {
+  async (req, res) => {
     res.render('register');
   });
 
